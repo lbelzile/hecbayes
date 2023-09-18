@@ -24,15 +24,14 @@ upworthy_question <- upworthy_restricted |>
   mutate(question = factor(question, levels = c(TRUE, FALSE), labels = c('yes', 'no')),
          id = as.integer(factor(id))) |>
   filter(duplicated(id, fromLast = TRUE) | duplicated(id)) |>
-  mutate(id = factor(as.integer(factor(id))))
+  mutate(id = factor(as.integer(factor(id))),
+         impressions = as.integer(impressions),
+         clicks = as.integer(clicks))
 # Select only questions with duplicate IDs (so there are yes/no)
 
-
-  
-
 usethis::use_data(upworthy_question, overwrite = TRUE)
+sinew::makeOxygen(upworthy_question)
 
- 
 # upworthy_restricted |>
 #   count(asks_question)
 # question_or_not <-
@@ -40,11 +39,11 @@ usethis::use_data(upworthy_question, overwrite = TRUE)
 #   summarise(
 #     ave_clicks = mean(clicks/impressions),
 #     .by = c(clickability_test_id, asks_question)
-#   ) 
+#   )
 # question_or_not |>
 #   pivot_wider(names_from = asks_question,
 #               values_from = ave_clicks,
 #               names_prefix = "ave_clicks_") |>
 #   drop_na(ave_clicks_FALSE, ave_clicks_TRUE) |>
-#   mutate(difference_in_clicks = ave_clicks_TRUE - ave_clicks_FALSE) |> 
+#   mutate(difference_in_clicks = ave_clicks_TRUE - ave_clicks_FALSE) |>
 #   summarise(average_difference = mean(difference_in_clicks))

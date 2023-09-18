@@ -24,3 +24,20 @@
 #'   \item{\code{clicks}}{[integer] number of clicks}
 #'}
 "upworthy_question"
+
+
+#' Distractions from smartwatches while driving
+#'
+#' Experiment from Tech3Lab using a driving simulator to study
+#' the impact of various distraction on attention and performance.
+#' The experimental conditions were compared in Table 3 of Brodeur et al. (2021)
+#' using Wilcoxon's signed rank test.
+#' @format A data frame with 124 rows and 3 variables:
+#' \describe{
+#'   \item{\code{id}}{[factor] participant identifier}
+#'   \item{\code{task}}{[factor] type of distraction}
+#'   \item{\code{nviolation}}{[integer] total number of violations}
+#'}
+#' @source Shang Lin Chen, personal communication, distributed under CC BY-NC-SA 4.0
+#' @references Brodeur, M., Ruer, P. Léger, P. and S. Sénécal (2021).Smartwatches are more distracting than mobile phones while driving: Results from an experimental study, \emph{Accident Analysis & Prevention}, 149, 1-9.
+"smartwatch"
