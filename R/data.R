@@ -41,3 +41,17 @@
 #' @source Shang Lin Chen, personal communication, distributed under CC BY-NC-SA 4.0
 #' @references Brodeur, M., Ruer, P. Léger, P. and S. Sénécal (2021).Smartwatches are more distracting than mobile phones while driving: Results from an experimental study, \emph{Accident Analysis & Prevention}, 149, 1-9.
 "smartwatch"
+
+#' Euro-American dollar exchange rate
+#' 
+#' Irregular time series of official exchange rate 
+#' from the European Central Bank to American dollar from 1999 until April 2023. 
+#' Week-ends and official holidays are excluded.
+#'
+#' @format A data frame with 6335 rows and 2 variables:
+#' \describe{
+#'   \item{\code{date}}{[Date] date of measurement}
+#'   \item{\code{rate}}{[double] exchange rate EUR/USD} 
+#'}
+#' @source European Central Bank’s Statistical Data Warehouse, accessed September 25th, 2023
+exchangerate
