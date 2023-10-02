@@ -886,6 +886,9 @@ dtnorm <- function(x,
   #   dens <- dens - pnorm(q = a, mean = mean, sd = sd,
   #                        log.p = TRUE, lower.tail = FALSE)
   # }
+  if(!log){
+    dens <- exp(dens)
+  }
   return(dens)
 }
 
