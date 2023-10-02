@@ -43,15 +43,16 @@
 "smartwatch"
 
 #' Euro-American dollar exchange rate
-#' 
-#' Irregular time series of official exchange rate 
-#' from the European Central Bank to American dollar from 1999 until April 2023. 
+#'
+#' Irregular time series of official exchange rate
+#' from the European Central Bank to American dollar from 1999 until April 2023.
 #' Week-ends and official holidays are excluded.
 #'
 #' @format A data frame with 6335 rows and 2 variables:
 #' \describe{
 #'   \item{\code{date}}{[Date] date of measurement}
-#'   \item{\code{rate}}{[double] exchange rate EUR/USD} 
+#'   \item{\code{rate}}{[double] exchange rate EUR/USD}
 #'}
+#' @docType data
 #' @source European Central Bank’s Statistical Data Warehouse, accessed September 25th, 2023
-exchangerate
+"exchangerate"

@@ -2,7 +2,7 @@
 
 export(adaptive)
 export(dtnorm)
-export(mh_fun)
+export(mh)
 export(multivariate_laplace_update)
 export(rtnorm)
 export(univariate_laplace_update)

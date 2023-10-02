@@ -14,7 +14,7 @@
 #' @export
 #' @importFrom "methods" "formalArgs"
 #' @importFrom "stats" "dnorm" "plogis" "qlogis" "rnorm" "runif"
-mh_fun <- function(
+mh <- function(
     type = c("rw","mala","laplace"),
     par_curr,
     par_name,
