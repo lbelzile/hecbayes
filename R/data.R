@@ -56,3 +56,22 @@
 #' @docType data
 #' @source European Central Bank’s Statistical Data Warehouse, accessed September 25th, 2023
 "exchangerate"
+
+
+#' Road traffic accidents and speed limits experiment on motorway in Sweden
+#'
+#' In this experiment, data were collected on the same days in two consecutive years, and
+#' speed limits were sometimes enforced in either. The purpose of the analysis is to analyse
+#' the effect of the traffic limits.
+#'
+#' @references Svensson, A. (1981) \emph{On a goodness-of-fit test for multiplicative Poisson models}. Annals of Statistics \bold{9}, 697–704.
+#'
+#' @docType data
+#' @format a data frame in long format of 184 observations on the following variables
+#' \describe{
+#' \item{\code{accidents}}{integer; daily number of accident}
+#' \item{\code{day}}{integer; day of the experiment, ranging from 1 to 92}
+#' \item{\code{year}}{integer; year of the measurement, either 1961 or 1962}
+#' \item{\code{limit}}{logical: was a speed limit enforced?}
+#' }
+"sweden"
