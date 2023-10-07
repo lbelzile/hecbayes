@@ -75,3 +75,21 @@
 #' \item{\code{limit}}{logical: was a speed limit enforced?}
 #' }
 "sweden"
+
+#' Electoral participation
+#'
+#' @description Data from a Ipsos survey commissioned by FiveThirtyEight to study determinant of electoral participation during national elections. Data have been coupled with census registers and weighted to reflect the US population as a whole. For more details, consult the \href{https://raw.githubusercontent.com/fivethirtyeight/data/master/non-voters/README.md}{description} and the \href{https://github.com/fivethirtyeight/data/raw/master/non-voters/nonvoters_codebook.pdf}{survey questionaire}. Data were used in the article \href{https://projects.fivethirtyeight.com/non-voters-poll-2020-election/}{\emph{Why Millions of Americans Don't Vote}}.
+#' @format A data frame with 5836 rows and 8 variables:
+#' \describe{
+#'   \item{\code{age}}{[integer] age of respondant}
+#'   \item{\code{race}}{[factor] race, one of \code{black}, \code{hispanic}, \code{other/mixed} or \code{white}}
+#'   \item{\code{gender}}{[factor] gender, either \code{male} or \code{female}}
+#'   \item{\code{income}}{[factor] income category}
+#'   \item{\code{vote}}{[ordered] frequency of vote in national election, either \code{rarely/never}, \code{sporadic} or \code{always}}
+#'   \item{\code{educ}}{[factor] education level of respondent}
+#'   \item{\code{weight}}{[double] sampling weight}
+#'   \item{\code{party}}{[factor] party affiliation, either Democrat (\code{Dem}), Republican (\code{GOP}) or \code{other} for non-response, independent, third party or no preference}
+#'}
+#' @note Data shared under  Creative Commons Attribution 4.0 International License
+#' @source FiveThirtyEight, `non-voters` data
+"voting"
