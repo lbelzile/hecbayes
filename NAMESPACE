@@ -2,8 +2,10 @@
 
 export(adaptive)
 export(dtnorm)
+export(equicorrelation)
 export(mh)
 export(multivariate_laplace_update)
+export(rcondmvnorm)
 export(rtnorm)
 export(univariate_laplace_update)
 export(univariate_mala_update)
