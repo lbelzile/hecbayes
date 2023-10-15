@@ -93,3 +93,16 @@
 #' @note Data shared under  Creative Commons Attribution 4.0 International License
 #' @source FiveThirtyEight, `non-voters` data
 "voting"
+
+
+#' Population of largest American cities
+#'
+#' Size of cities above 200 000 inhabitants according to 2020 US census.
+#'
+#' @format A data frame with 113 rows and 2 variables:
+#' \describe{
+#'   \item{\code{city}}{[character] name of city}
+#'   \item{\code{population}}{[integer] number of inhabitants}
+#'}
+#' @source Wikipedia, List of United States Cities by population. Accessed October 10th, 2023. \url{https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population}
+"uscitypopn"
