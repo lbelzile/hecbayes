@@ -5,7 +5,7 @@
 #' @param mean vector of means
 #' @param covariance covariance matrix
 #' @param precision precision matrix
-#' @return an \code{n} by \ode{d} matrix of draws
+#' @return an \code{n} by \code{d} matrix of draws
 #' @export
 rcondmvnorm <- function(n, value, ind, mean, covariance, precision = NULL){
   if(is.null(precision)){

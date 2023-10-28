@@ -18,7 +18,7 @@ rcondmvnorm(n, value, ind, mean, covariance, precision = NULL)
 \item{precision}{precision matrix}
 }
 \value{
-an \code{n} by \ode{d} matrix of draws
+an \code{n} by \code{d} matrix of draws
 }
 \description{
 Simulation from a conditional multivariate Gaussian
