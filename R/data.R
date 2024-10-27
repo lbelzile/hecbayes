@@ -106,3 +106,18 @@
 #'}
 #' @source Wikipedia, List of United States Cities by population. Accessed October 10th, 2023. \url{https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population}
 "uscitypopn"
+
+
+#' @title Combining probability forecasts
+#' @description This data from Mislavsky and Gaertig Study 4 studied how participants combine expert forecasts under different settings. Participants were recruited on Amazon MTurk and provided with expert prediction about NFL games, which charts translating probabilities into verbal statements. Participants could be on the outcome using a slide. The outcome is whether the participants makes a prediction more extreme than the most bullish advisor.
+#' @format A data frame with 1197 rows and 5 variables:
+#' \describe{
+#'   \item{\code{extreme}}{[integer] response variable, did participant make forecast more extreme than most extreme advisor? Either yes (\code{1}) or no (\code{0})}
+#'   \item{\code{answer}}{[integer] participant answer, either \code{1} for first answer or \code{2} for second answer}
+#'   \item{\code{stock}}{[factor] stock shown to participants}
+#'   \item{\code{id}}{[factor] unique participant identifier}
+#'   \item{\code{condition}}{[factor] experimental condition, one of \code{numeric}, \code{numeric with direction} or \code{verbal}} 
+#'}
+#' @source ResearchBox 62, \url{https://researchbox.org/62}
+#' @references Mislavsky R, Gaertig C. (2022). \emph{Combining Probability Forecasts: 60% and 60% Is 60%, but Likely and Likely Is Very Likely}. Management Science. 68(\bold{1}):541-563, doi: \url{https://doi.org/10.1287/mnsc.2020.3902}
+"xforecast"
