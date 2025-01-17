@@ -181,3 +181,4 @@
 #' @source Research Box 602, \url{https://researchbox.org/602}, licensed under CC BY 4.0
 #' @references Duke, K.E. and O. Amir (2023). \emph{The Importance of Selling Formats: When Integrating Purchase and Quantity Decisions Increases Sales}, Marketing Science,42(1), 87-109. \doi{10.1287/mksc.2022.1364}
 "sellingformat"
+
