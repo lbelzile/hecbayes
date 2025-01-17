@@ -106,3 +106,78 @@
 #'}
 #' @source Wikipedia, List of United States Cities by population. Accessed October 10th, 2023. \url{https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population}
 "uscitypopn"
+
+
+#' @title Combining probability forecasts
+#' @description This data from Study 4 of Mislavsky and Gaertig studied how participants combine expert forecasts under different settings. Participants were recruited on Amazon MTurk and provided with expert prediction about NFL games, which charts translating probabilities into verbal statements. Participants could be on the outcome using a slide. The outcome is whether the participants makes a prediction more extreme than the most bullish advisor.
+#' @format A data frame with 1197 rows and 5 variables:
+#' \describe{
+#'   \item{\code{extreme}}{[integer] response variable, did participant make forecast more extreme than most extreme advisor? Either yes (\code{1}) or no (\code{0})}
+#'   \item{\code{answer}}{[integer] participant answer, either \code{1} for first answer or \code{2} for second answer}
+#'   \item{\code{stock}}{[factor] stock shown to participants}
+#'   \item{\code{id}}{[factor] unique participant identifier}
+#'   \item{\code{condition}}{[factor] experimental condition, one of \code{numeric}, \code{numeric with direction} or \code{verbal}}
+#'}
+#' @source ResearchBox 62, \url{https://researchbox.org/62}
+#' @references Mislavsky R, Gaertig C. (2022). Combining Probability Forecasts: 60% and 60% Is 60%, but Likely and Likely Is Very Likely. Management Science. 68 (\bold{1}), 541-563, doi: \url{https://doi.org/10.1287/mnsc.2020.3902}
+"xforecast"
+
+
+#' Florida's 2000 presidential election results
+#'
+#' This database contains demographic variables and the number
+#' of votes for the major candidates, Bush and Gore, as well
+#' as the ballots cast for Pat Buchanan for each of the 67 counties.
+#'
+#'
+#' @source Smith, R.L. (2002). \emph{A statistical assessment of Buchanan's vote in Palm Beach County}, \bold{17}(4), 441-457.
+#' @docType data
+#' @format a data frame in long format of 67 observations on the following variables
+#' \describe{
+#' \item{\code{accidents}}{integer; daily number of accident}
+#' \item{\code{county}}{name of county}
+#' \item{\code{popn}}{population of the county in 1997}
+#' \item{\code{white}}{percentage of whites in 1996}
+#' \item{\code{black}}{percentage of blacks in 1996}
+#' \item{\code{hisp}}{percentage of Hispanics in 1996}
+#' \item{\code{geq65}}{percentage of the population aged 65 and above based on 1996 and 1997 population estimates}
+#' \item{\code{highsc}}{percentage of the population with a high school degree (1990 Census data)}
+#' \item{\code{coll}}{percentage of the population that are college graduates (1990 Census data)}
+#' \item{\code{income}}{mean personal income in 1994}
+#' \item{\code{buch}}{total ballots cast for Pat Buchanan (Reform)}
+#' \item{\code{bush}}{total ballots cast for Georges W. Bush (GOP)}
+#' \item{\code{gore}}{total ballots cast for Al Gore (Democrat)}
+#' \item{\code{totmb}}{the total number of votes cast for the presidential election in each county, minus Buchanan votes}
+#' }
+"buchanan"
+
+
+
+#' Waiting time for the Montreal metro
+#'
+#' Time (in seconds) from 17:59 until the departure of the next metro at the Universite de Montreal station
+#' during week-days over three consecutive months
+#'
+#' @docType data
+#' @format a numeric vector with 62 observations
+#' \describe{
+#' \item{\code{waiting}}{time (in seconds) before the next metro departure}
+#' }
+#' @source STM
+"waiting"
+
+#' @title Selling formats and impact on sales
+#' @description This is a subset of the data from Experiment 1 of Duke and Amir (2023). The study investigated the impact of presenting customers with a sequential choice (first decide whether or not to buy, then pick quantity) as opposed to an integrated decision (choose not to buy, or one of different quantities) on sales and the number of items bought.
+#'
+#' @docType data
+#' @format A data frame with 397 rows and 5 variables:
+#' \describe{
+#'   \item{\code{format}}{[factor] experimental condition, either \code{quantity-integrated} or \code{quantity-sequential}}
+#'   \item{\code{purchased}}{[integer] binary variable indicating whether the respondant purchased the item (\code{1}) or not (\code{0})}
+#'   \item{\code{amount}}{[integer] amount purchased}
+#'   \item{\code{gender}}{[factor] gender of respondant, one of \code{female}, \code{male} or \code{other}}
+#'   \item{\code{age}}{[integer] age of respondant}
+#'}
+#' @source Research Box 602, \url{https://researchbox.org/602}, licensed under CC BY 4.0
+#' @references Duke, K.E. and O. Amir (2023). \emph{The Importance of Selling Formats: When Integrating Purchase and Quantity Decisions Increases Sales}, Marketing Science,42(1), 87-109. \doi{10.1287/mksc.2022.1364}
+"sellingformat"
