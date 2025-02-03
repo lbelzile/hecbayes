@@ -892,3 +892,8 @@ dtnorm <- function(x,
   return(dens)
 }
 
+
+#' @importFrom rcpp evalCpp
+#' @useDynLib hecbayes, .registration=TRUE
+NULL
+
