@@ -893,7 +893,7 @@ dtnorm <- function(x,
 }
 
 
-#' @importFrom rcpp evalCpp
+#' @importFrom Rcpp evalCpp
 #' @useDynLib hecbayes, .registration=TRUE
 NULL
 

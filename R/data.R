@@ -182,3 +182,16 @@
 #' @references Duke, K.E. and O. Amir (2023). \emph{The Importance of Selling Formats: When Integrating Purchase and Quantity Decisions Increases Sales}, Marketing Science,42(1), 87-109. \doi{10.1287/mksc.2022.1364}
 "sellingformat"
 
+#' Montreal precipitation data
+#'
+#' Amount of precipitation (in mm) in Montreal YUL airport
+#' weather station for 2020-2024, by day of the year
+#'
+#' @format A data frame with 1827 rows and 3 variables:
+#' \describe{
+#'   \item{\code{year}}{[integer] year of observation}
+#'   \item{\code{day}}{[integer] day of the year}
+#'   \item{\code{precip}}{[double] amount of precipitation (in mm)}
+#'}
+#' @source Environment Canada
+"mtlprecip"
