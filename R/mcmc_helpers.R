@@ -897,3 +897,67 @@ dtnorm <- function(x,
 #' @useDynLib hecbayes, .registration=TRUE
 NULL
 
+
+#' Sparse circulant precision matrix for random walk priors on integers
+#'
+#' Given a dimension \code{d}, return a circulant matrix with the coefficients
+#' @param type type of prior, either first-order (\code{rw1}) or second-order (\code{rw2})
+#' @param sparse logical; if \code{TRUE}, returns a sparse matrix of class \code{dsCMatrix}
+#' @param d integer; dimension of the model.
+#' @return a \code{d} by \code{d} precision matrix
+#' @importFrom Matrix Matrix
+#' @export
+crw_Q <- function(d, type = c("rw1", "rw2"), sparse = TRUE) {
+  sparse <- isTRUE(sparse)
+  type <- match.arg(type)
+  d <- as.integer(d)[1]
+  if(type == "rw2"){
+    if(d < 3L){
+      stop("Invalid dimension")
+    }
+    if(d == 3L){
+      base <- c(6,-3,-3)
+    } else if(d == 4L){
+      base <- c(6, -4, 2, -4)
+    } else if(d == 5L){
+      base <- c(6, -4, 1, 1, -4)
+    } else{
+      base <- c(6,-4, 1, rep(0, d-5), 1, -4)
+    }
+  } else if(type == "rw1"){
+    if(d <= 3L){
+      stop("Invalid dimension")
+    } else if(d >= 4L){
+      base <- c(2, -1, rep(0, d - 3L), -1)
+    }
+  }
+  mat <- suppressWarnings(
+    matrix(base[matrix(1:d, d+1, d+1, byrow = TRUE)[c(1,d:2), 1:d]], d, d))
+  if(sparse){
+    mat <- Matrix::Matrix(mat, sparse = TRUE)
+  }
+  return(mat)
+}
+
+#' Simulate a Gaussian random field
+#'
+#' Simulate a Gaussian random field with sparse precision matrix \eqn{Q} and mean \eqn{Q^{-1}b}
+#' Exploiting the sparsity structure as much as possible
+#' @param n integer; sample size
+#' @param b \code{d} vector of scaled location
+#' @param Q \code{d} by \code{d} precision matrix
+#' @return an \code{n} by \code{d} matrix
+#' @export
+#' @references Rue, H. (2001). \emph{Fast sampling of Gaussian Markov random fields}. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 63: 325-338. \doi{10.1111/1467-9868.00288}.
+rGaussQ <- function(n, b, Q){
+  n <- as.integer(n)
+  stopifnot(n >= 1, nrow(Q) == length(b))
+  Lmat <- Matrix::chol(Q) # yields upper triangular matrix!
+  v <- Matrix::solve(a = Matrix::t(Lmat), b = b)
+  nu <- as.numeric(Matrix::solve(a = Lmat, b = v))
+  y <- Matrix::solve(a = Lmat, matrix(rnorm(n = n*length(b)), ncol = n))
+  if(n == 1L){
+    y <- as.numeric(y)
+  }
+  t(nu + y)
+}
