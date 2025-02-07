@@ -195,3 +195,49 @@
 #'}
 #' @source Environment Canada
 "mtlprecip"
+
+
+#' Rat tumor data
+#'
+#' Data from Tarone (1982), extracted from Table 5. It contains observations from
+#' 70 experiments on animal carcinogenesis bioassay conducted with female F344 rats,
+#' with data on sample sizes and records of the number of lung cancer tumors developed.
+#'
+#' @format A data frame with 70 rows and 2 variables:
+#' \describe{
+#'   \item{\code{counts}}{[integer] counts of tumors out of \code{n}}
+#'   \item{\code{n}}{[integer] experiment sample size}
+#'}
+#' @references Tarone, R. E. (1982) The use of historical information in
+#'   testing for a trend in proportions. \emph{Biometrics}, \strong{38},
+#'   215-220. \doi{10.2307/2530304}
+"rats"
+
+
+#' Mid 21st Century Global Temperature Projection Data
+#'
+#' Indices of global temperature change from late 20th century (1970-1999)
+#' to mid 21st century (2020-2049) based on data produced by the Fifth
+#' Coupled Model Intercomparison Project (CMIP5).
+#'
+#' @format A data frame with 270 rows and 3 variables:
+#' \describe{
+#'   \item{\code{temp}}{[double] anomaly of 2020-2049 mean relative to
+#'       the 1970-1999 mean}
+#'   \item{\code{GCM}}{[factor] family of general circulation model provider}
+#'   \item{\code{RCP}}{[double] representative concentration pathway}
+#'  }
+#' @source Extracted from package \code{bang}. The raw data from which the indices are calculated are monthly
+#'   CMIP5 scenario runs for global surface air temperature from the KNMI Climate Explorer (\url{https://climexp.knmi.nl/})
+#'   on 4/3/2015.
+#' @references Northrop, P.J. and B.D. Hall (2024) bang: Bayesian Analysis, No Gibbs, R package, version 1.0.4, \doi{10.32614/CRAN.package.bang}
+#' @references Northrop, P.J. and R.E. Chandler (2014). Quantifying
+#'   Sources of Uncertainty in Projections of Future Climate.
+#'   \emph{Journal of Climate}, \strong{27}, 8793-8808.
+#'   \doi{10.1175/JCLI-D-14-00265.1}
+#' @references Van Vuuren, D. P., Edmonds, J., Kainuma, M., Riahi, K.
+#'   Thomson, A., Hibbard, K., Hurtt, G. C., Kram, T., Krey, V.,
+#'   Lamarque, J.-F. (2011). The representative concentration pathways:
+#'   an overview. \emph{Climatic change}, \strong{109}, 5-31.
+#'   \doi{10.1007/s10584-011-0148-z}
+"climatechange"
