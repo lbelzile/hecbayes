@@ -941,8 +941,7 @@ crw_Q <- function(d, type = c("rw1", "rw2"), sparse = TRUE) {
 
 #' Simulate a Gaussian random field
 #'
-#' Simulate a Gaussian random field with sparse precision matrix \eqn{Q} and mean \eqn{Q^{-1}b}
-#' Exploiting the sparsity structure as much as possible
+#' Simulate a Gaussian random field with sparse precision matrix \eqn{Q} and mean \eqn{Q^{-1}b}, exploiting the sparsity structure.
 #' @param n integer; sample size
 #' @param b \code{d} vector of scaled location
 #' @param Q \code{d} by \code{d} precision matrix

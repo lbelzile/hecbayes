@@ -17,8 +17,7 @@ rGaussQ(n, b, Q)
 an \code{n} by \code{d} matrix
 }
 \description{
-Simulate a Gaussian random field with sparse precision matrix \eqn{Q} and mean \eqn{Q^{-1}b}
-Exploiting the sparsity structure as much as possible
+Simulate a Gaussian random field with sparse precision matrix \eqn{Q} and mean \eqn{Q^{-1}b}, exploiting the sparsity structure.
 }
 \references{
 Rue, H. (2001). \emph{Fast sampling of Gaussian Markov random fields}. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 63: 325-338. \doi{10.1111/1467-9868.00288}.
