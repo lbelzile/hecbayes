@@ -7,7 +7,7 @@
 \format{
 A data frame with 270 rows and 3 variables:
 \describe{
-  \item{\code{temp}}{[double] anomaly of 2020-2049 mean relative to
+  \item{\code{temp}}{[double] anomaly of 2069-2098 mean relative to
       the 1970-1999 mean}
   \item{\code{GCM}}{[factor] family of general circulation model provider}
   \item{\code{RCP}}{[double] representative concentration pathway}
@@ -23,7 +23,7 @@ climatechange
 }
 \description{
 Indices of global temperature change from late 20th century (1970-1999)
-to mid 21st century (2020-2049) based on data produced by the Fifth
+to the end of the 21st century (2069-2098) based on data produced by the Fifth
 Coupled Model Intercomparison Project (CMIP5).
 }
 \references{
