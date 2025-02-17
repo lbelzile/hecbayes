@@ -44,17 +44,17 @@
 
 #' Euro-American dollar exchange rate
 #'
-#' Irregular time series of official exchange rate
-#' from the European Central Bank to American dollar from 1999 until April 2023.
-#' Week-ends and official holidays are excluded.
+#' Irregular time series of official U.S. Dollars to Euro Spot Exchange Rate.
+#' Week-ends and official holidays are excluded. The time series runs from 2015-02-07 until 2025-02-07.
 #'
 #' @format A data frame with 6335 rows and 2 variables:
 #' \describe{
 #'   \item{\code{date}}{[Date] date of measurement}
-#'   \item{\code{rate}}{[double] exchange rate EUR/USD}
+#'   \item{\code{dexrate}}{[double] exchange rate EUR/USD}
 #'}
 #' @docType data
-#' @source European Central Bank’s Statistical Data Warehouse, accessed September 25th, 2023
+#' @source Federal Reserve Bank of St. Louis (FRED), accessed 2025-02-07,
+#' \url{https://fred.stlouisfed.org/series/DEXUSEU/}
 "exchangerate"
 
 
