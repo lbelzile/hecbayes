@@ -14,4 +14,4 @@ exchangerate <- read.csv(file = "data/DEXUSEU.csv", header = TRUE) |>
   mutate(date = lubridate::ymd(as.Date(lubridate::ymd(date))))
 usethis::use_data(exchangerate, overwrite = TRUE)
 
-y <- diff(log(exchangerate$dexrate))
+y <- 100*diff(log(exchangerate$dexrate))
