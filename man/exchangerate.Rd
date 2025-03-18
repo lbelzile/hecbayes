@@ -12,8 +12,7 @@ A data frame with 6335 rows and 2 variables:
 }
 }
 \source{
-Federal Reserve Bank of St. Louis (FRED), accessed 2025-02-07,
-\url{https://fred.stlouisfed.org/series/DEXUSEU/}
+Board of Governors of the Federal Reserve System (US), U.S. Dollars to Euro Spot Exchange Rate [DEXUSEU], retrieved from FRED, Federal Reserve Bank of St. Louis; \url{https://fred.stlouisfed.org/series/DEXUSEU}, February 17, 2025.
 }
 \usage{
 exchangerate

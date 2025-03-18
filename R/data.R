@@ -240,3 +240,15 @@
 #'   an overview. \emph{Climatic change}, \strong{109}, 5-31.
 #'   \doi{10.1007/s10584-011-0148-z}
 "climatechange"
+
+
+#' @title English Football League results for 2023-2024
+#' @description Scores of football (soccer) regular matches for the 2023 season of the EFL. Each of the 20 teams played twice against each opponent at home and away (four matches in total against each opponent).
+#' @format A data frame with 760 rows and 4 variables:
+#' \describe{
+#'   \item{\code{score}}{[integer] number of goals of \code{team} during a match}
+#'   \item{\code{team}}{[factor] name of the team which scored the goal}
+#'   \item{\code{opponent}}{[factor] name of adversary}
+#'   \item{\code{home}}{[integer] binary variable worth 1 if \code{team} is playing at home, 0 otherwise.}
+#'}
+"efl"
