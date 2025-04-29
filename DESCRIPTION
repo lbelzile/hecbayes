@@ -1,7 +1,7 @@
 Package: hecbayes
 Type: Package
 Title: Data sets and functions for the course Bayesian modelling at HEC Montreal
-Version: 2025.03.18
+Version: 2025.04.29
 Author: Leo Belzile
 Maintainer: Leo Belzile <leo.belzile@hec.ca>
 Description: A collection of curated data sets and utility functions for the course MATH 80601A at

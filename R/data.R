@@ -151,7 +151,6 @@
 "buchanan"
 
 
-
 #' Waiting time for the Montreal metro
 #'
 #' Time (in seconds) from 17:59 until the departure of the next metro at the Universite de Montreal station
@@ -252,3 +251,10 @@
 #'   \item{\code{home}}{[integer] binary variable worth 1 if \code{team} is playing at home, 0 otherwise.}
 #'}
 "efl"
+
+
+#' @title Posterior draws for Poisson mixed model
+#' @description A matrix containing 250 draws from the posterior of the 36 parameters for the Poisson mixed
+#' model applied to the smartwatch dataset.
+#' @keywords internal
+"posterior_smartwatch"
